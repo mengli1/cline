@@ -750,7 +750,7 @@ export class McpHub {
 	}
 
 	private removeAllFileWatchers() {
-		this.fileWatchers.forEach((watcher) => watcher.close())
+		this.fileWatchers.forEach((watcher) => void watcher.close())
 		this.fileWatchers.clear()
 	}
 

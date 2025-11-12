@@ -154,11 +154,11 @@ export const TerminalSettingsSection: React.FC<TerminalSettingsSectionProps> = (
 								id="terminal-execution-mode"
 								onChange={(event) => handleExecutionModeChange(event as Event)}
 								value={vscodeTerminalExecutionMode ?? "vscodeTerminal"}>
-								<VSCodeOption value="vscodeTerminal">VS Code Terminal</VSCodeOption>
-								<VSCodeOption value="backgroundExec">Background Exec</VSCodeOption>
+								<VSCodeOption value="vscodeTerminal">{t("settings.terminal.vscode_terminal")}</VSCodeOption>
+								<VSCodeOption value="backgroundExec">{t("settings.terminal.background_exec")}</VSCodeOption>
 							</VSCodeDropdown>
 							<p className="text-xs text-[var(--vscode-descriptionForeground)] mt-1">
-								Choose whether Cline runs commands in the VS Code terminal or a background process.
+								{t("settings.terminal.terminal_execution_mode_description")}
 							</p>
 						</div>
 					)}

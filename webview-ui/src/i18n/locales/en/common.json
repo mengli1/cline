@@ -511,7 +511,7 @@
 			"cli_path_description": "Path to the Claude Code CLI.",
 			"model_version_info": "Use the latest version of {{model}} by default."
 		},
-		" hicap": {
+		"hicap": {
 			"api_key_label": "Hicap API Key"
 		},
 		"dify": {

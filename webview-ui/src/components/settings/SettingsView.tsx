@@ -88,8 +88,8 @@ export const SETTINGS_TABS: SettingsTab[] = [
 	{
 		id: "debug",
 		name: "settings.tabs.debug",
-		tooltipText: "settings.tabs.debug",
-		headerText: "settings.tabs.debug",
+		tooltipText: "settings.tooltips.debug",
+		headerText: "settings.headers.debug",
 		icon: FlaskConical,
 		hidden: !IS_DEV,
 	},

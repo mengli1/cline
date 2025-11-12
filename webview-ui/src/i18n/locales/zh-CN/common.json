@@ -511,7 +511,7 @@
 			"cli_path_description": "Claude Code CLI 的路径。",
 			"model_version_info": "默认使用 {{model}} 的最新版本。"
 		},
-		" hicap": {
+		"hicap": {
 			"api_key_label": "Hicap API 密钥"
 		},
 		"dify": {

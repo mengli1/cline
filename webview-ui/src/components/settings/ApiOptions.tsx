@@ -171,7 +171,7 @@ const ApiOptions = ({ showModelOptions, apiErrorMessage, modelIdErrorMessage, is
 			{ value: "minimax", label: t("api_options.provider_options.minimax") },
 			{ value: "hicap", label: t("api_options.provider_options.hicap") },
 			{ value: "aihubmix", label: t("api_options.provider_options.aihubmix") },
-			{ value: "nousResearch", label: t("api_options.provider_options.nous_research", "NousResearch") }
+			{ value: "nousResearch", label: t("api_options.provider_options.nousresearch") },
 		]
 
 		// Filter by platform

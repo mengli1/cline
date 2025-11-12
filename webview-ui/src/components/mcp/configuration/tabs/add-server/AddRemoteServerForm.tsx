@@ -24,19 +24,19 @@ const AddRemoteServerForm = ({ onServerAdded }: { onServerAdded: () => void }) =
 		e.preventDefault()
 
 		if (!serverName.trim()) {
-			setError(t("mcp.add_remote.server_name_required", "Server name is required"))
+			setError(t("mcp.add_remote.server_name_required"))
 			return
 		}
 
 		if (!serverUrl.trim()) {
-			setError(t("mcp.add_remote.server_url_required", "Server URL is required"))
+			setError(t("mcp.add_remote.server_url_required"))
 			return
 		}
 
 		try {
 			new URL(serverUrl)
 		} catch (_err) {
-			setError(t("mcp.add_remote.invalid_url_format", "Invalid URL format"))
+			setError(t("mcp.add_remote.invalid_url_format"))
 			return
 		}
 
@@ -63,16 +63,16 @@ const AddRemoteServerForm = ({ onServerAdded }: { onServerAdded: () => void }) =
 			onServerAdded()
 		} catch (error) {
 			setIsSubmitting(false)
-			setError(error instanceof Error ? error.message : t("mcp.add_remote.failed_to_add_server", "Failed to add server"))
+			setError(error instanceof Error ? error.message : t("mcp.add_remote.failed_to_add_server"))
 		}
 	}
 
 	return (
 		<div className="p-4 px-5">
 			<div className="text-(--vscode-foreground) mb-2">
-				{t("mcp.add_remote.description", "Add a remote MCP server by providing a name and its URL endpoint. Learn more")}{" "}
+				{t("mcp.add_remote.description")}{" "}
 				<VSCodeLink href={LINKS.DOCUMENTATION.REMOTE_MCP_SERVER_DOCS} style={{ display: "inline" }}>
-					{t("mcp.add_remote.learn_more", "here.")}
+					{t("mcp.add_remote.learn_more")}
 				</VSCodeLink>
 			</div>
 
@@ -87,7 +87,7 @@ const AddRemoteServerForm = ({ onServerAdded }: { onServerAdded: () => void }) =
 						}}
 						placeholder="mcp-server"
 						value={serverName}>
-						{t("mcp.add_remote.server_name", "Server Name")}
+						{t("mcp.add_remote.server_name")}
 					</VSCodeTextField>
 				</div>
 
@@ -101,14 +101,34 @@ const AddRemoteServerForm = ({ onServerAdded }: { onServerAdded: () => void }) =
 						}}
 						placeholder="https://example.com/mcp-server"
 						value={serverUrl}>
-						{t("mcp.add_remote.server_url", "Server URL")}
+						{t("mcp.add_remote.server_url")}
 					</VSCodeTextField>
+				</div>
+
+				<div className="mb-3">
+					<label className={`block text-sm font-medium mb-2 ${isSubmitting ? "opacity-50" : ""}`}>
+						{t("mcp.add_remote.transport_type")}
+					</label>
+					<VSCodeRadioGroup
+						disabled={isSubmitting}
+						onChange={(e) => {
+							const value = (e.target as HTMLInputElement).value as TransportType
+							setTransportType(value)
+						}}
+						value={transportType}>
+						<VSCodeRadio checked={transportType === "streamableHttp"} value="streamableHttp">
+							{t("mcp.add_remote.streamable_http")}
+						</VSCodeRadio>
+						<VSCodeRadio checked={transportType === "sse"} value="sse">
+							{t("mcp.add_remote.sse_legacy")}
+						</VSCodeRadio>
+					</VSCodeRadioGroup>
 				</div>
 
 				{error && <div className="mb-3 text-(--vscode-errorForeground)">{error}</div>}
 
 				<VSCodeButton className="w-full" disabled={isSubmitting} type="submit">
-						{isSubmitting ? t("mcp.add_remote.adding", "Adding...") : t("mcp.add_remote.add_server", "Add Server")}
+					{isSubmitting ? t("mcp.add_remote.adding") : t("mcp.add_remote.add_server")}
 				</VSCodeButton>
 
 				<VSCodeButton
@@ -119,7 +139,7 @@ const AddRemoteServerForm = ({ onServerAdded }: { onServerAdded: () => void }) =
 						})
 					}}
 					style={{ width: "100%", marginBottom: "5px", marginTop: 15 }}>
-					{t("mcp.add_remote.edit_configuration", "Edit Configuration")}
+					{t("mcp.add_remote.edit_configuration")}
 				</VSCodeButton>
 			</form>
 		</div>

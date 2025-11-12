@@ -413,7 +413,8 @@
 			"oca": "Oracle Code Assist",
 			"minimax": "MiniMax",
 			"hicap": "Hicap",
-			"aihubmix": "AIhubmix"
+			"aihubmix": "AIhubmix",
+			"nousresearch": "NousResearch"
 		}
 	},
 	"api_provider": {
@@ -571,6 +572,14 @@
 			"sign_in_again": "Sign in again",
 			"have_idea": "Have an idea for Oracle Code Assist?",
 			"provide_feedback": "Provide feedback"
+		},
+		"nousresearch": {
+			"api_key_label": "NousResearch API Key",
+			"api_key_placeholder": "Enter API Key...",
+			"api_key_help_text": "This key is stored locally and only used to make API requests from this extension.",
+			"model_label": "Model",
+			"note_text": "Note",
+			"note_content": "Cline uses complex prompts and works best with Claude models. Less capable models may not work as expected."
 		},
 		"common": {
 			"api_key_label": "{{providerName}} API Key",
@@ -905,9 +914,6 @@
 			"enable_aggressive_terminal_reuse": "Enable aggressive terminal reuse",
 			"enable_aggressive_terminal_reuse_description": "When enabled, Cline will reuse existing terminal windows that aren't in the current working directory. Disable this if you experience issues with task lockout after a terminal command.",
 			"terminal_execution_mode": "Terminal Execution Mode",
-			"terminal_execution_mode_description": "Background terminal runs commands without showing terminal windows (recommended for cleaner UI and better performance). Interactive terminal shows VSCode terminal windows for each command.",
-			"terminal_execution_mode_interactive": "Interactive Terminal (VSCode)",
-			"terminal_execution_mode_background": "Background Terminal (Recommended)",
 			"terminal_issues_help_text": "Having terminal issues?",
 			"check_our": "Check our",
 			"terminal_quick_fixes_link": "Terminal Quick Fixes",
@@ -1039,7 +1045,10 @@
 			"add_server": "Add Server",
 			"connecting": "Connecting to server... This may take a few seconds.",
 			"edit_configuration": "Edit Configuration",
-			"failed_to_add_server": "Failed to add server"
+			"failed_to_add_server": "Failed to add server",
+			"transport_type": "Transport Type",
+			"streamable_http": "Streamable HTTP",
+			"sse_legacy": "SSE (Legacy)"
 		},
 		"configure": {
 			"description_part1": "The",

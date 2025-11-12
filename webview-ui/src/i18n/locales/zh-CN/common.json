@@ -413,7 +413,8 @@
 			"oca": "Oracle Code Assist",
 			"minimax": "MiniMax",
 			"hicap": "Hicap",
-			"aihubmix": "AIhubmix"
+			"aihubmix": "AIhubmix",
+			"nousresearch": "NousResearch"
 		}
 	},
 	"api_provider": {
@@ -736,6 +737,14 @@
 			"model_select_placeholder": "选择一个模型...",
 			"no_models_available": "VS Code 语言模型 API 允许您运行其他 VS Code 扩展提供的模型（包括但不限于 GitHub Copilot）。最简单的入门方法是从 VS Marketplace 安装 Copilot 扩展并启用 Claude 4 Sonnet。",
 			"experimental_note": "注意：这是一个非常实验性的集成，可能无法按预期工作。"
+		},
+		"nousresearch": {
+			"api_key_label": "NousResearch API 密钥",
+			"api_key_placeholder": "输入 API 密钥...",
+			"api_key_help_text": "此密钥仅在本地存储，仅用于从此扩展发送 API 请求。",
+			"model_label": "模型",
+			"note_text": "注意",
+			"note_content": "Cline 使用复杂的提示，与 Claude 模型配合使用效果最佳。能力较弱的模型可能无法按预期工作。"
 		}
 	},
 	"validation": {
@@ -905,9 +914,6 @@
 			"enable_aggressive_terminal_reuse": "启用激进的终端重用",
 			"enable_aggressive_terminal_reuse_description": "启用后，Cline 将重用不在当前工作目录中的现有终端窗口。如果您在终端命令后遇到任务锁定问题，请禁用此功能。",
 			"terminal_execution_mode": "终端执行模式",
-			"terminal_execution_mode_description": "后台终端运行命令时不显示终端窗口（推荐使用，以获得更简洁的界面和更好的性能）。交互式终端为每个命令显示 VSCode 终端窗口。",
-			"terminal_execution_mode_interactive": "交互式终端 (VSCode)",
-			"terminal_execution_mode_background": "后台终端 (推荐)",
 			"terminal_issues_help_text": "终端有问题？",
 			"check_our": "查看我们的",
 			"terminal_quick_fixes_link": "终端快速修复",
@@ -1039,7 +1045,10 @@
 			"add_server": "添加服务器",
 			"connecting": "正在连接服务器... 这可能需要几秒钟。",
 			"edit_configuration": "编辑配置",
-			"failed_to_add_server": "添加服务器失败"
+			"failed_to_add_server": "添加服务器失败",
+			"transport_type": "传输类型",
+			"streamable_http": "可流式 HTTP",
+			"sse_legacy": "SSE (旧版)"
 		},
 		"configure": {
 			"description_part1": "",
